@@ -1,6 +1,9 @@
 import React from "react";
 import pdf from "../../public/Resume.pdf";
 import BouncyImagePushAnimation from "./BounceImg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 
 function Intro() {
    useGSAP(() => {
