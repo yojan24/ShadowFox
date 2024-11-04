@@ -3,8 +3,15 @@ import pdf from "../../public/Resume.pdf";
 import BouncyImagePushAnimation from "./BounceImg";
 
 function Intro() {
+   useGSAP(() => {
+    gsap.from(".home-animate", {
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+    });
+  });
   return (
-    <div className="flex justify-center items-center  w-full h-full">
+    <div className="flex justify-center items-center  w-full h-full home-animate">
       <div className="w-full flex flex-col lg:flex-row mx-auto justify-around items-center">
         <div className="text-white md:text-2xl  text-lg lg:order-first order-last flex flex-col justify-center  md:mt-0 mt-3 items-center">
           <div className="flex flex-col md:justify-start lg:items-start items-center justify-center">
