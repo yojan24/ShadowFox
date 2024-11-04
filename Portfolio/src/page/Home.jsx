@@ -16,7 +16,7 @@ function Home() {
     <Element name="home">
       <div className="min-h-[100vh] lg:h-screen py-2 ">
         <Nav />
-        <Intro />
+        <Intro className="home-animate" />
       </div>
     </Element>
   );
