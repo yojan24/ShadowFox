@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+:root
+{
+    --color-black: #0d0106;
+    --color-pink-dark: #9c0d38;
+    --color-pink-light: #ce5374;
+    --color-grey: #74776b;
+    --color-white: #fbfbff;
+}
+
+$gradient-top-left: linear-gradient(to bottom, #9c0d38ff, #ce5374ff, #fbfbffff);
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px (browser default) = 62.5%
+
+
+}
+
+body
+{
+    box-sizing: border-box;
+    min-width: 100vw;
+    height: 100vh;
+    display: grid;
+    // grid-template-rows: auto 1fr auto;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    background-color: var(--color-white);
+    font-size: 1.6rem;
+    font-family: "ubuntu", sans-serif;
+    font-weight: 300;
+
+    header
+    {
+        display: none;
+
+        h1
+        {
+            text-align: center;
+            color: var(--color-pink-dark);
+            padding: 6rem 3rem 2rem 3rem;
+            border-bottom: 2px solid var(--color-grey);
+            margin: 0 5rem;
+        }
+    }
+
+    main
+    {
+        padding: 4rem;
+        height: 100vh;
+
+    }
+}
+
+.container
+{
+    max-width: 1200px;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (max-width: 768px)
+    {
+        flex-direction: column;
+    }
+
+    a
+    {
+        transition: all .3s;
+        padding: 2rem;
+
+        &:hover
+        {
+            transform: scale(1.2);
+        }
+    }
+
+
+    img
+    {
+        display: block;
+        width: 15rem;
+        box-shadow: 2rem 3rem 5rem rgba(var(--color-black), .2);
+
+    }
+}
+
+footer
+{
+    text-align: center;
+    min-height: 7rem;
+    background-color: var(--color-black);
+    color: var(--color-pink-dark);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    align-self: end;
+    display: none;
+
+
+    a
+    {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--color-pink-light);
+    }
+}
